@@ -1,4 +1,3 @@
-﻿using System;
 public class Calculadora
 {
     private double ultimoResultado;
@@ -27,14 +26,14 @@ public class Calculadora
     {
         try
         {
+            if (a == 0 || b == 0)
+            {
+                Console.WriteLine("we can't divide by '0'");
+            }
             ultimoResultado = a / b;
-
+            return ultimoResultado;
         }
-        catch (DivideByZeroException ex)
-        {
-            Console.WriteLine(ex.Message);
-            UltimoResultado = double.NaN;
-        };
-        return ultimoResultado;
+        finally {
+
+        }  
     }
-}
